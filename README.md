@@ -45,5 +45,8 @@ Visualización
 
 
 # Resultados / Insights → Los hallazgos más importantes, claros y accionables.
+
+El análisis muestra que el riesgo no depende solo del número de ataques, sino del tipo de actividad y la interacción con el entorno.
+
 # Próximos pasos → Qué extenderías si tuvieras más datos o más tiempo.
 # Cómo replicar el proyecto → Enlace al notebook, queries SQL o dashboard.
