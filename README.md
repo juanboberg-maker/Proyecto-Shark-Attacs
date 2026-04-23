@@ -15,38 +15,92 @@ Se compararán actividades, países y gravedad de los ataques para detectar patr
 
 # Título del proyecto → Shark Attack Risk Analysis: Global Activity-Based Risk Map
 
-Objetivo del proyecto → El objetivo de este proyecto es analizar los ataques de tiburón a nivel global para identificar qué actividades acuáticas están más asociadas a los incidentes y en qué países se concentran más.
-Se hace especial énfasis en los ataques no provocados (unprovoked), ya que representan mejor el riesgo real para las personas.
+Analizar los ataques de tiburón a nivel global para identificar qué actividades acuáticas presentan mayor riesgo y en qué países se concentran más los incidentes.
+
+Se pone especial foco en diferenciar entre ataques provocados y no provocados, con el objetivo de evaluar el riesgo real asociado a cada actividad.
 
 # Dataset → 
 
-El dataset utilizado contiene registros históricos de ataques de tiburón, incluyendo variables como:
+El dataset utilizado contiene registros históricos de ataques de tiburón a nivel mundial.
 
-País (Country)
-Actividad realizada (Activity)
-Tipo de ataque (Type: Provoked / Unprovoked)
-Año (Year)
-Especie (Species)
-Fatal Y/N
+Variables principales utilizadas:
 
-Durante el análisis se realizó una limpieza y estandarización de los datos, especialmente en la variable "Activity", para agrupar actividades similares (por ejemplo: surfing, swimming, diving).
+country → país donde ocurre el ataque
+activity → actividad realizada
+type → tipo de ataque (provoked / unprovoked)
+year → año del incidente
+species → especie del tiburón
+fatal y/n → si el ataque fue fatal
+
+Durante el análisis se realizó una selección de variables relevantes para simplificar el estudio.
 
 
 # Proceso de análisis → 
 
-El análisis se desarrolló en varias fases:
-Limpieza de datos
-Filtrado de datos
-Número de ataques por país
-número de ataques por actividad
-Cruce entre país y actividad
-calculo de metricas
-Visualización
+El análisis se llevó a cabo en varias etapas:
+
+1. Limpieza de datos
+
+Conversión de nombres de columnas a minúsculas
+Eliminación de valores nulos en variables clave (country, activity, type)
+Revisión y eliminación de duplicados
+
+2. Transformación de variables
+
+Creación de una nueva variable activity_clean
+Agrupación de actividades similares en categorías:
+Surfing
+Swimming
+Diving
+Fishing
+Shallow water
+Board sports
+Snorkeling
+Other
+
+3. Filtrado
+
+Selección de ataques no provocados (Unprovoked) para analizar el riesgo real
+
+4. Análisis exploratorio
+
+Conteo de ataques por país
+Conteo de ataques por actividad
+Análisis cruzado entre país y actividad
+Cálculo de porcentajes por país
+
+5. Análisis de riesgo
+
+Comparación entre ataques provocados y no provocados por actividad
+Clasificación de actividades según su peligrosidad
 
 
 # Resultados / Insights → Los hallazgos más importantes, claros y accionables.
 
-El análisis muestra que el riesgo no depende solo del número de ataques, sino del tipo de actividad y la interacción con el entorno.
+Los principales hallazgos del análisis son:
+
+* Estados Unidos y Australia concentran la mayor cantidad de ataques de tiburón a nivel global.
+* Swimming y Surfing son las actividades con más incidentes registrados.
+* El surfing presenta un mayor riesgo real, ya que concentra una alta proporción de ataques no provocados.
+* La pesca (fishing), aunque presenta muchos incidentes, está más asociada a ataques provocados, lo que reduce el riesgo en condiciones normales.
+* Una parte significativa de los ataques ocurre en aguas poco profundas, lo que indica que el riesgo no se limita al mar abierto.
+* El riesgo varía según el país, aunque existen patrones globales comunes.
 
 # Próximos pasos → Qué extenderías si tuvieras más datos o más tiempo.
+
+Posibles mejoras del proyecto:
+
+Analizar evolución temporal de los ataques
+Diferenciar entre ataques fatales y no fatales
+Construir un modelo predictivo de riesgo
+
 # Cómo replicar el proyecto → Enlace al notebook, queries SQL o dashboard.
+
+Para replicar el análisis:
+
+Clonar el repositorio
+Ejecutar el notebook principal
+Asegurarse de tener instaladas las librerías necesarias:
+pandas
+
+El código incluye todo el proceso de limpieza, transformación y análisis de los datos.
