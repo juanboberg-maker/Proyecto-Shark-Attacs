@@ -1,4 +1,5 @@
-# Proyecto-Shark-Attacs
+
+t4tg rf# Proyecto-Shark-Attacs
 Proyecto de limpieza y exploración de ataques de tiburón
 soy la persona b 
 # Objetivo del proyecto
@@ -104,3 +105,5 @@ Asegurarse de tener instaladas las librerías necesarias:
 pandas
 
 El código incluye todo el proceso de limpieza, transformación y análisis de los datos.
+# Enlace a la presentación
+https://canva.link/jatqn4veligk6tz
